@@ -25,6 +25,7 @@ const Languages = () => {
   )
 };
 
+// Language Component
 const Language = ({ children }: { children: React.ReactNode }) => {
   return <button type="button" className="language other">{children}</button>
 };
