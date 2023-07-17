@@ -6,7 +6,7 @@ import { NavProps } from "@/types";
 import { ArrowDown } from "@/assets/icons";
 import useToggle from "@/hooks/useToggle";
 
-// Navbar List
+// Navigation List
 const NavList = () => {
   const renderNavigation = useMemo(() => {
     return navigation && navigation.map((nav, index) => {
