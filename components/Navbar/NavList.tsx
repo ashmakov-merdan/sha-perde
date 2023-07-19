@@ -2,20 +2,28 @@
 import { navigation } from "@/static";
 import Link from "next/link";
 import { useMemo } from "react";
-import { NavProps } from "@/types";
+import { NavProps, ToggleProps } from "@/types";
 import { ArrowDown } from "@/assets/icons";
 import useToggle from "@/hooks/useToggle";
+import Languages from "../Languages/Languages";
 
 // Navigation List
-const NavList = () => {
+const NavList = ({open}: ToggleProps) => {
   const renderNavigation = useMemo(() => {
     return navigation && navigation.map((nav, index) => {
       return <NavItem {...nav} key={index} />
     })
   }, [navigation]);
 
+  const navstyle = {
+    right: open ? "0%" : "-150%"
+  }
+
   return (
-    <ul className="nav-list">{renderNavigation}</ul>
+    <ul className="nav-list" style={navstyle}>
+      {renderNavigation}
+      <Languages/>
+    </ul>
   )
 };
 
