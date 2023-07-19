@@ -1,0 +1,165 @@
+@import "./variables.scss";
+
+header {
+  margin: 0 auto;
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(115.48deg, rgba(10, 35, 34, 0.95) 12.52%, rgba(0, 0, 0, 0.05) 65.13%);
+  position: relative;
+  display: grid;
+  overflow: hidden;
+
+  & > .container {
+    z-index: 2;
+    margin: auto;
+
+    & > .wrapper {
+      display: grid;
+      grid-template-columns: $grid-column;
+      row-gap: 20px;
+
+      & > .heading {
+        margin: 0;
+        grid-column: 1 / 4;
+        width: 640px;
+        font-size: 76px;
+        font-weight: 400;
+        line-height: 90px;
+        color: $white;
+        text-transform: uppercase;
+      }
+
+      & > .description {
+        grid-column: 2 / 4;
+        width: 460px;
+        font-size: 18px;
+        font-weight: 300;
+        color: $white;
+      }
+
+      & > #button {
+        grid-column: 2 / 3;
+        width: 240px;
+      }
+
+    }
+  }
+}
+
+.carousel {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.carousel-item {
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  filter: brightness(90%);
+  z-index: -2;
+  opacity: 0;
+  transition: all .5s ease;
+
+  &.active-slide {
+    opacity: 1;
+    transform: translateX(0%);
+  }
+
+  &.last-slide {
+    transform: translateX(-100%);
+    z-index: -1;
+  }
+
+  &.next-slide {
+    transform: translateX(100%);
+    z-index: -2;
+  }
+}
+
+.indicator {
+  position: relative;
+  top: 90%;
+  margin: 0 auto;
+  max-width: 1300px;
+  width: 100%;
+  height: fit-content;
+  padding-bottom: 80px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-end;
+  gap: 20px;
+  z-index: 4;
+
+  & > button {
+    border: none;
+    outline: none;
+    background: $white;
+    height: 3px;
+    border-radius: 10px;
+    transition: width .5s ease-in-out, color .5s ease-in-out;
+  }
+}
+
+@media screen and (max-width: 1400px) {
+  .indicator {
+    padding-inline: 20px;
+  }
+}
+
+@media screen and (max-width: 768px){
+  header {
+    & > .container {
+  
+      & > .wrapper {
+        
+        & > .heading {
+          max-width: 480px;
+          font-size: 60px;
+        }
+  
+        & > .description {
+          grid-column: 1 / 4;
+        }
+  
+        & > #button {
+          grid-column: 1 / 3;
+        }
+  
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 560px){
+  header {
+    & > .container {
+  
+      & > .wrapper {
+        grid-template-columns: max-content;
+        & > .heading {
+          grid-column: span;
+          max-width: 320px;
+          font-size: 46px;
+          line-height: 60px;
+        }
+  
+        & > .description {
+          max-width: 240px;
+          font-size: 16px;
+        }
+  
+        & > #button {
+          display: none;
+        }
+  
+      }
+    }
+  }
+}
