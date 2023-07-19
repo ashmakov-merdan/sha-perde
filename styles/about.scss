@@ -1,0 +1,147 @@
+@import "./variables.scss";
+
+#about {
+  position: relative;
+  width: 100vw;
+  background-color: $primary;
+
+  & > .container {
+    padding-block: 200px;
+    display: grid;
+    grid-template-columns: $grid-column;
+    row-gap: 50px;
+
+    & > .row {
+      &:nth-child(1) {
+        grid-column: 2 / 5;
+
+        & > .heading {
+          font-size: 16px;
+          font-weight: 400;
+          color: $gray;
+        }
+
+        & > .whoweare {
+          font-family: $playfair;
+          font-size: 36px;
+          color: $black;
+        }
+      }
+
+      &:nth-child(2){
+        grid-column: 2 / 6;
+        display: grid;
+        grid-template-columns: repeat(2, 50%);
+
+        & > .col:nth-child(1) {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          gap: 50px;
+
+          & > p {
+            max-width: 420px;
+            width: 100%;
+            font-size: 16px;
+            font-weight: 300;
+            line-height: 160%;
+            color: $black;
+          }
+
+          & > button {
+            width: fit-content;
+          }
+        }
+
+        & > .col:nth-child(2) {
+          & > img {
+            width: 100%;
+            object-fit: cover;
+          }
+        }
+      }
+    }
+  }
+}
+
+#pattern {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  overflow: hidden;
+
+  & > img {
+    position: absolute;
+    top: -50px;
+    left: -80px;
+    transform: scaleX(-1);
+  }
+}
+
+@media screen and (max-width: 940px) {
+  #about {
+    & > .container {
+      & .row {
+        &:nth-child(1) {
+          grid-column: 1 / 5;
+        }
+        &:nth-child(2) {
+          grid-column: 1 / 6;
+        }
+      }
+    }
+  }
+
+  #pattern {
+    right: 0; 
+    & > img {
+      left: unset;
+      right: -80px;
+    }
+  }
+}
+
+
+@media screen and (max-width: 768px){
+  #about {
+    & > .container {
+      & > .row {
+        &:nth-child(2) {
+          display: flex;
+          flex-direction: column;
+          gap: 50px;
+
+          & > .col {
+            &:nth-child(1) {
+              & > p {
+                max-width: 100%;
+              }
+              & > button {
+                width: 100%;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 560px) {
+  #about {
+    & > .container {
+      display: flex;
+      flex-direction: column;
+
+      & > .row {
+        &:nth-child(1) {
+          & > .whoweare {
+            font-size: 20px;
+            font-weight: 400;
+            line-height: 150%;
+          }
+        }
+      }
+    }
+  }
+}
