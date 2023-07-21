@@ -1,7 +1,7 @@
 "use client"
 import { navigation } from "@/static";
 import Link from "next/link";
-import { useMemo } from "react";
+import { useEffect, useMemo } from "react";
 import { NavProps, ToggleProps } from "@/types";
 import { ArrowDown } from "@/assets/icons";
 import useToggle from "@/hooks/useToggle";
@@ -53,11 +53,11 @@ const NavItem = ({ title, path, subs }: NavProps) => {
             </ul>
           </>
         ) : (
-          <Link
+          <a
             href={path}
             className="nav-link" onClick={() => toggle()}>
             {title} {subs ? <span className={open ? "arrow up" : "arrow"}><ArrowDown /></span> : null}
-          </Link>
+          </a>
         )
       }
     </li>
