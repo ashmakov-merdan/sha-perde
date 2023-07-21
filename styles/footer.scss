@@ -1,0 +1,12 @@
+@import "./variables.scss";
+
+footer {
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  background: $primary;
+}
+
+.copyright {
+  color: $gray;
+}
