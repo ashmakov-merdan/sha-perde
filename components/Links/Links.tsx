@@ -1,4 +1,4 @@
-import { links } from "@/static";
+import { links } from "@/public/static";
 import Link from "next/link";
 import { LinkProps } from "@/types";
 
