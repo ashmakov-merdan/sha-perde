@@ -7,18 +7,18 @@ export const Form = () => {
     <form id="form">
       <div className="field">
       <label htmlFor="name" className="legend">Name</label>
-        <input type="text" id="name" name="name" placeholder="John" className="formInput" />
+        <input type="text" id="name" name="name" className="formInput" />
       </div><div className="field">
       <label htmlFor="last" className="legend">Last name</label>
-        <input type="text" id="last" name="last" placeholder="Doe" className="formInput" />
+        <input type="text" id="last" name="last" className="formInput" />
       </div>
       <div className="field">
       <label htmlFor="email" className="legend">Email</label>
-        <input type="text" id="email" name="email" placeholder="johndoe@example.com" className="formInput" />
+        <input type="text" id="email" name="email" className="formInput" />
       </div>
       <div className="field">
       <label htmlFor="msg" className="legend">Message</label>
-        <textarea name="msg" id="msg" className="formInput" cols={30} rows={10} placeholder="I'd like to ..."></textarea>
+        <textarea name="msg" id="msg" className="formInput" cols={30} rows={10}></textarea>
       </div>
       <div className="field addition">
         <Links />
