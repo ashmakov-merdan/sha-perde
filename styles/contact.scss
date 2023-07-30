@@ -198,6 +198,11 @@
 
           & > .contact-number a {
             font-size: 30px;
+
+            &:last-child::after {
+              top: 5px;
+              left: -40px;
+            }
           }
         }
         
@@ -252,6 +257,14 @@
 
     & > button {
       width: 100%;
+    }
+  }
+
+  #contact {
+    .heading {
+      h1 {
+        font-size: 20px;
+      }
     }
   }
 }
