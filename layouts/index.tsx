@@ -1,11 +1,11 @@
-import Navbar from "./Navbar/Navbar";
-import Header from "./Header/Header";
-import About from "./About/About";
-import Services from "./Services/Services";
-import Quality from "./Quality/Quality";
-import Projects from './Projects/Projects';
-import Contact from "./Contact/Contact";
-import Footer from "./Footer/Footer";
+import Navbar from "./Home/Navbar/Navbar";
+import Header from "./Home/Header/Header";
+import About from "./Home/About/About";
+import Services from "./Home/Services/Services";
+import Quality from "./Home/Quality/Quality";
+import Projects from './Home/Projects/Projects';
+import Contact from "./Home/Contact/Contact";
+import Footer from "./Home/Footer/Footer";
 
 export {
   Navbar,
