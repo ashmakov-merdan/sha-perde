@@ -1,5 +1,5 @@
 "use client"
-import { carousel } from "@/static";
+import { carousel } from "@/public/static";
 import { useState, useEffect, useMemo } from "react";
 import { CarouselProps, IndicatorProps } from "@/types";
 
