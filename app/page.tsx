@@ -1,8 +1,17 @@
+import { Header, About, Services, Quality, Projects, Contact, Footer } from "@/layouts";
+
 const Home = () => {
   return (
-    <main>
-      <h1>Home page</h1>
-    </main>
+    <>
+      <Header />
+      <main>
+        <About />
+        <Services />
+        <Projects />
+        <Contact />
+      </main>
+      <Footer />
+    </>
   )
 };
 
