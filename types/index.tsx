@@ -27,6 +27,11 @@ export type ComponentProps = {
   children: string
 };
 
+export type ButtonProps = {
+  children: string,
+  link: string
+}
+
 export type ToggleProps = {
   open: boolean,
   toggle: () => void;
