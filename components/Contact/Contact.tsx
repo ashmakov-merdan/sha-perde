@@ -22,7 +22,7 @@ export const Form = () => {
       </div>
       <div className="field addition">
         <Links />
-        <Button>Отправить</Button>
+        <Button link={"/send"} >Отправить</Button>
       </div>
     </form>
   )
