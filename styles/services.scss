@@ -245,4 +245,22 @@
       height: 170px;
     }
   }
+
+  #services {
+  
+    & > .container {
+      
+      & > .row:nth-child(1) { 
+  
+        & > .col {
+          &:nth-child(2) {
+            grid-column: 1 /6;
+
+             h1 {
+              font-size: 20px;
+            }
+          }
+        }
+      }
+  }}
 }
