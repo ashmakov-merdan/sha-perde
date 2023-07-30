@@ -28,12 +28,18 @@ body {
   background: $main;
   font-family: $playfair;
   font-weight: 600;
-  font-size: 20px;
+  font-size: 18px;
   cursor: pointer;
 }
 
 @media screen and (max-width: 1400px) {
   .container {
     padding-inline: 20px;
+  }
+}
+
+@media screen and (max-width: 560px){
+  .container {
+    padding-inline: 10px;
   }
 }
