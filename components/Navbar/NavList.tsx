@@ -1,5 +1,5 @@
 "use client"
-import { navigation } from "@/static";
+import { navigation } from "@/public/static";
 import Link from "next/link";
 import { useEffect, useMemo } from "react";
 import { NavProps, ToggleProps } from "@/types";
